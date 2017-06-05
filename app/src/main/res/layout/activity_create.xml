@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3D6CF">
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/absoluteLayout">
+
+    </AbsoluteLayout>
+
+    <Button
+        android:id="@+id/btnAddNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:background="#A37771"
+        android:onClick="submit"
+        android:text="Add Note"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/radioType"
+        android:layout_centerHorizontal="true" />
+
+    <RadioGroup
+        android:id="@+id/radioType"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:checkedButton="@+id/radioIncome"
+        android:layout_marginTop="17dp"
+        android:layout_alignTop="@+id/type"
+        android:layout_alignStart="@+id/type">
+
+        <RadioButton
+            android:id="@+id/radioIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="52dp"
+            android:layout_alignStart="@+id/type"
+            android:layout_below="@+id/type"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="14dp"
+            android:text="Income" />
+
+        <RadioButton
+            android:id="@+id/radioOutcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/type"
+            android:layout_below="@+id/radioIncome"
+            android:layout_marginStart="10dp"
+            android:text="Outcome" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:hint="   how much..."
+        android:inputType="number"
+        android:layout_marginTop="49dp"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/detail" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Type"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/money"
+        android:layout_alignStart="@+id/money"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="100dp"
+        android:text="Baht"
+        android:textColor="#575757"
+        android:textSize="20dp"
+        android:layout_alignBaseline="@+id/money"
+        android:layout_alignBottom="@+id/money"
+        android:layout_toEndOf="@+id/money" />
+
+    <EditText
+        android:id="@+id/detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="300dp"
+        android:hint="  details"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/title" />
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:width="200dp"
+        android:hint=" Title"
+        android:textSize="30dp"
+        android:layout_below="@+id/btnCancel"
+        android:layout_alignStart="@+id/btnAddNote"
+        android:layout_marginTop="7dp" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@+id/btnAddNote"
+        android:background="#A37771"
+        android:onClick="back"
+        android:text="X" />
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delet"
+        android:layout_below="@+id/btnAddNote"
+        android:layout_alignStart="@+id/btnAddNote"
+        android:layout_marginTop="10dp"
+        android:layout_alignEnd="@+id/btnAddNote"
+        android:background="#A37771"
+        android:onClick="delete"/>
+
+</RelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3D6CF">
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lvItems"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/balance"
+        android:layout_above="@+id/btnCreate">
+    </ListView>
+
+    <TextView
+        android:id="@+id/balance"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Your balance:   0   baht"
+        android:textAlignment="center"
+        android:textSize="28dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="#A37771"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add  New  Note"
+        android:textStyle="bold"
+        android:textColor="#FFE2D5"
+        android:textSize="20dp"
+        android:id="@+id/btnCreate"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:onClick="create"
+        android:background="#A37771"
+        android:width="500dp"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
